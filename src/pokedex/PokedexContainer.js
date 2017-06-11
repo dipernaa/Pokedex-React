@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import { List, ListItem } from 'material-ui/List';
 import Loading from '../shared/Loading';
-import { getPokemon, getPokemonDetails } from '../actions';
+import PokedexList from './PokedexList';
+import { getPokemon } from '../actions';
 
 export class PokedexContainer extends Component {
 
@@ -12,37 +12,29 @@ export class PokedexContainer extends Component {
   }
 
   render() {
-    const { isLoading, pokemonData } = this.props;
+    const { isLoading, pokedexData } = this.props;
 
     if (isLoading) {
       return <Loading />;
     }
 
     return (
-      <List>
-        {pokemonData.map((pokemon, index) => (
-          <ListItem
-            key={index}
-            primaryText={pokemon.name}
-          />
-        ))}
-      </List>
+      <PokedexList pokedex={pokedexData}/>
     );
   }
 }
 
 export const mapStateToProps = (state) => {
-  const { pokemon } = state;
+  const { pokedex } = state;
 
   return {
-    isLoading: pokemon.isLoading,
-    pokemonData: pokemon.results
+    isLoading: pokedex.isLoading,
+    pokedexData: pokedex.results
   };
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  getPokemon: () => dispatch(getPokemon()),
-  getPokemonDetail: (url) => dispatch(getPokemonDetails(url))
+  getPokemon: () => dispatch(getPokemon())
 });
 
 export default muiThemeable()(connect(mapStateToProps, mapDispatchToProps)(PokedexContainer));

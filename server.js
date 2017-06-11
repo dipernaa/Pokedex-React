@@ -8,11 +8,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/dist/index.html');
-});
-
-app.get('/pokedex', function(req, res) {
+app.get('/api/pokedex', function(req, res) {
   const options = {
     uri: `${BASE_API}/pokemon/?limit=151`,
     json: true
@@ -27,7 +23,7 @@ app.get('/pokedex', function(req, res) {
     });
 });
 
-app.get('/pokedex/details', function(req, res) {
+app.get('/api/details', function(req, res) {
   const options = {
     uri: req.query.url,
     json: true
@@ -40,6 +36,10 @@ app.get('/pokedex/details', function(req, res) {
     .catch(err => {
       res.status(500).send(err);
     });
+});
+
+app.get('*', function(req, res) {
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 app.listen(PORT, err => {

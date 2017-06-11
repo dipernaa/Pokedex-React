@@ -1,5 +1,7 @@
-import pokemonActions from './pokemon';
+import detailActions from './details';
+import pokedexActions from './pokedex';
 
 module.exports = {
-  ...pokemonActions
+  ...detailActions,
+  ...pokedexActions
 };
