@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 
 app.get('/pokedex', function(req, res) {
   const options = {
-    uri: `${BASE_API}/pokemon`,
+    uri: `${BASE_API}/pokemon/?limit=151`,
     json: true
   };
 

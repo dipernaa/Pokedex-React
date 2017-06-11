@@ -11,7 +11,6 @@ function getPokemon() {
 }
 
 function getPokemonDetails(url) {
-  console.log('here');
   return createAsyncAction(GET_POKEMON_DETAILS, () => api.getAsync(`/pokedex/details?url=${url}`));
 }
 

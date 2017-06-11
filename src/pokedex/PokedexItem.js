@@ -1,17 +1,9 @@
 import React from 'react';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 
-const PokedexItem = ({ getPokemonDetail, isLoading, pokemon }) => (
+const PokedexItem = ({ getPokemonDetail, pokemon }) => (
   <Card
-    onExpandChange={(expanded) => {
-      if (expanded && !isLoading) {
-        console.log('hello');
-        return getPokemonDetail(pokemon.url);
-      }
-
-      console.log('hi');
-      return null;
-    }}
+    onExpandChange={() => getPokemonDetail(pokemon.url)}
   >
     <CardHeader
       title={pokemon.name}
@@ -19,7 +11,7 @@ const PokedexItem = ({ getPokemonDetail, isLoading, pokemon }) => (
       showExpandableButton
     />
     <CardText expandable>
-      {pokemon.name}
+      hi
     </CardText>
   </Card>
 );

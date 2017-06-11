@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import PokedexItem from './PokedexItem';
+import { List, ListItem } from 'material-ui/List';
 import Loading from '../shared/Loading';
 import { getPokemon, getPokemonDetails } from '../actions';
 
@@ -12,23 +12,21 @@ export class PokedexContainer extends Component {
   }
 
   render() {
-    const { getPokemonDetail, isLoading, pokemonData } = this.props;
+    const { isLoading, pokemonData } = this.props;
 
     if (isLoading) {
       return <Loading />;
     }
 
     return (
-      <div>
+      <List>
         {pokemonData.map((pokemon, index) => (
-          <PokedexItem
+          <ListItem
             key={index}
-            isLoading={isLoading}
-            getPokemonDetail={getPokemonDetail}
-            pokemon={pokemon}
+            primaryText={pokemon.name}
           />
         ))}
-      </div>
+      </List>
     );
   }
 }
