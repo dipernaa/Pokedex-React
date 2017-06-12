@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders an AppBar 1`] = `
+<AppBar
+  showMenuIconButton={false}
+  title="Super Title"
+  zDepth={1}
+/>
+`;
+
+exports[`renders an AppBar with a back arrow 1`] = `
+<AppBar
+  iconElementLeft={
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <NavigationArrowBack />
+    </IconButton>
+  }
+  onLeftIconButtonTouchTap={[Function]}
+  showMenuIconButton={true}
+  title="Super Title"
+  zDepth={1}
+/>
+`;

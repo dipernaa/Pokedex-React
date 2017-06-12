@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`correctly maps dispatch to props 1`] = `
+Object {
+  "getPokemon": [Function],
+}
+`;
+
+exports[`correctly maps dispatch to props 2`] = `
+Array [
+  Object {
+    "type": "GET_POKEMON_REQUEST",
+  },
+  Object {
+    "leap": "rules",
+    "type": "GET_POKEMON_SUCCESS",
+  },
+]
+`;
+
+exports[`correctly maps state to props 1`] = `
+Object {
+  "isLoading": false,
+  "pokedexData": Array [],
+}
+`;
+
+exports[`renders a Loading bar when loading 1`] = `<Loading />`;
+
+exports[`renders a PokedexList when not loading 1`] = `<PokedexList />`;
