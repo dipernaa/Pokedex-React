@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders an AppContainer 1`] = `
+<div
+  className="app"
+>
+  <AppBar
+    title="test"
+  />
+  <div>
+    HI
+  </div>
+</div>
+`;
