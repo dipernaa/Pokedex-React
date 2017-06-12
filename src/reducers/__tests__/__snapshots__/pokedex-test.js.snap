@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handles GET_POKEMON_FAILURE action 1`] = `
+Object {
+  "count": 0,
+  "isLoading": false,
+  "next": null,
+  "previous": null,
+  "results": Array [],
+}
+`;
+
+exports[`handles GET_POKEMON_REQUEST action 1`] = `
+Object {
+  "count": 0,
+  "isLoading": true,
+  "next": null,
+  "previous": null,
+  "results": Array [],
+}
+`;
+
+exports[`handles GET_POKEMON_SUCCESS action 1`] = `
+Object {
+  "count": 3,
+  "isLoading": false,
+  "next": "http://www.some.url",
+  "previous": "http://www.other.url",
+  "results": Array [
+    Object {
+      "id": 1,
+      "name": "pokedude",
+    },
+    Object {
+      "id": 3,
+      "name": "slappyPoke",
+    },
+    Object {
+      "id": 2,
+      "name": "ultraPoke",
+    },
+  ],
+}
+`;
+
+exports[`handles unexpected action 1`] = `
+Object {
+  "count": 0,
+  "isLoading": false,
+  "next": null,
+  "previous": null,
+  "results": Array [],
+}
+`;

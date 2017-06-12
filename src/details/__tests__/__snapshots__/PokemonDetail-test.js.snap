@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a PokemonDetail when pokemon is present 1`] = `
+<div>
+  <Paper
+    circle={true}
+    rounded={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "height": 160,
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "position": "relative",
+        "top": 20,
+        "width": 160,
+        "zIndex": 3,
+      }
+    }
+    transitionEnabled={true}
+    zDepth={1}
+  >
+    <Avatar
+      size={150}
+      src="http://www.some.url/pic.png"
+      style={
+        Object {
+          "marginLeft": "auto",
+          "marginRight": "auto",
+        }
+      }
+    />
+  </Paper>
+  <Card
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+    style={
+      Object {
+        "left": 0,
+        "margin": 20,
+        "position": "absolute",
+        "right": 0,
+        "top": 170,
+        "zIndex": 1,
+      }
+    }
+  >
+    <CardHeader
+      avatar={null}
+    />
+    <CardTitle
+      className="capitalize"
+      title="pokedude"
+    />
+    <CardText>
+      <div
+        style={
+          Object {
+            "paddingBottom": 5,
+          }
+        }
+      >
+        <strong>
+          Types:
+        </strong>
+         
+        bug, poison
+      </div>
+      <div
+        style={
+          Object {
+            "paddingBottom": 5,
+          }
+        }
+      >
+        <strong>
+          Base Experience:
+        </strong>
+         
+        123
+      </div>
+      <div
+        style={
+          Object {
+            "paddingBottom": 5,
+          }
+        }
+      >
+        <strong>
+          Height:
+        </strong>
+         
+        21
+      </div>
+      <div
+        style={
+          Object {
+            "paddingBottom": 5,
+          }
+        }
+      >
+        <strong>
+          Weight:
+        </strong>
+         
+        12
+      </div>
+      <div
+        style={
+          Object {
+            "paddingBottom": 5,
+          }
+        }
+      >
+        <strong>
+          Stats:
+        </strong>
+        <ul
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          <li>
+            hp
+            : 
+            42
+          </li>
+          <li>
+            speed
+            : 
+            12
+          </li>
+        </ul>
+      </div>
+    </CardText>
+  </Card>
+</div>
+`;
+
+exports[`renders null when pokemon is not present 1`] = `null`;

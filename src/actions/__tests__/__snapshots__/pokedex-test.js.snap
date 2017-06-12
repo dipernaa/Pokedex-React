@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a get pokemon details action 1`] = `
+Object {
+  "actionNames": Object {
+    "failure": "GET_POKEMON_FAILURE",
+    "request": "GET_POKEMON_REQUEST",
+    "success": "GET_POKEMON_SUCCESS",
+  },
+  "result": Object {
+    "endpoint": "/api/pokedex",
+  },
+}
+`;

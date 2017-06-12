@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handles GET_POKEMON_DETAILS_FAILURE action 1`] = `
+Object {
+  "isLoading": false,
+  "results": null,
+}
+`;
+
+exports[`handles GET_POKEMON_DETAILS_REQUEST action 1`] = `
+Object {
+  "isLoading": true,
+  "results": null,
+}
+`;
+
+exports[`handles GET_POKEMON_DETAILS_SUCCESS action 1`] = `
+Object {
+  "isLoading": false,
+  "results": Object {
+    "id": 34,
+    "name": "pokedude",
+  },
+}
+`;
+
+exports[`handles unexpected action 1`] = `
+Object {
+  "isLoading": false,
+  "results": null,
+}
+`;

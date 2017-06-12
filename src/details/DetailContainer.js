@@ -5,7 +5,7 @@ import Loading from '../shared/Loading';
 import PokemonDetail from './PokemonDetail';
 import { getPokemonDetails } from '../actions';
 
-class DetailContainer extends Component {
+export class DetailContainer extends Component {
 
   componentWillMount() {
     const { url } = this.props.location.query;

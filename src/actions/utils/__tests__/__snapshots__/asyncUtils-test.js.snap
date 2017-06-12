@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`builds action names from a base name 1`] = `
+Object {
+  "failure": "TEST_BASE_FAILURE",
+  "request": "TEST_BASE_REQUEST",
+  "success": "TEST_BASE_SUCCESS",
+}
+`;
+
+exports[`builds success, request, and failure functions 1`] = `
+Object {
+  "failure": [Function],
+  "request": [Function],
+  "success": [Function],
+}
+`;
+
+exports[`builds success, request, and failure functions 2`] = `
+Object {
+  "type": "TEST_BASE_REQUEST",
+}
+`;
+
+exports[`builds success, request, and failure functions 3`] = `
+Object {
+  "type": "TEST_BASE_SUCCESS",
+  "value": "data 1",
+}
+`;
+
+exports[`builds success, request, and failure functions 4`] = `
+Object {
+  "error": "error 1",
+  "type": "TEST_BASE_FAILURE",
+}
+`;
+
+exports[`dispatches the correct actions for a failed async action 1`] = `
+Array [
+  Object {
+    "type": "TEST_BASE_REQUEST",
+  },
+  Object {
+    "error": "error 2",
+    "type": "TEST_BASE_FAILURE",
+  },
+]
+`;
+
+exports[`dispatches the correct actions for a successful async action 1`] = `
+Array [
+  Object {
+    "type": "TEST_BASE_REQUEST",
+  },
+  Object {
+    "data": "data 1",
+    "type": "TEST_BASE_SUCCESS",
+  },
+]
+`;
