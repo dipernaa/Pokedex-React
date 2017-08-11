@@ -6,3 +6,4 @@ script:
   - npm test -- -i --no-cache
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - sh .travis/deploy-dockerhub.sh
