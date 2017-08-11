@@ -8,5 +8,5 @@ else
 fi
 
 REPO_NAME="dipernaa/pokedex-react"
-docker build -f Dockerfile -t $TRAVIS_REPO_SLUG:$TAG .
-docker push $TRAVIS_REPO_SLUG
+docker build -f Dockerfile -t $REPO_NAME:$TAG .
+docker push $REPO_NAME
