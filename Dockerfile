@@ -2,7 +2,6 @@ FROM node:boron
 
 # Create app directory
 RUN mkdir -p /usr/src/app
-RUN mkdir -p /usr/src/app/coverage
 WORKDIR /usr/src/app
 
 # Install app dependencies
