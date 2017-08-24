@@ -30,7 +30,6 @@ it('renders a PokemonDetail when not loading', () => {
   );
 
   expect(toJson(wrapper)).toMatchSnapshot();
-  expect(false).toBeTruthy();
 });
 
 it('renders a Loading bar when loading', () => {
