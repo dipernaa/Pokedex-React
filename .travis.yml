@@ -5,15 +5,15 @@ services:
 
 language: node_js
 
-cache: yarn
-
 node_js:
   - "node"
 
+install: true
+
 script:
-  - npm test -- -i --no-cache
+  - source .travis/configure-tag.sh
+  - docker build -t $CONTAINER_NAME:$TAG .
+  - docker run $CONTAINER_NAME:$TAG npm test -- -i --no-cache
 
 after_success:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  - sh .travis/deploy-ecr.sh
-  - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy-heroku.sh
+  - sh .travis/deploy.sh
