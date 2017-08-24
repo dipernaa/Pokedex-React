@@ -1,5 +1,9 @@
 #!/bin/sh
 
+pip install --user awscli
+export PATH=$PATH:$HOME/.local/bin
+eval $(aws ecr get-login --region $AWS_REGION)
+
 if [ "$TRAVIS_BRANCH" = "master" ]; then
     TAG="latest"
 else

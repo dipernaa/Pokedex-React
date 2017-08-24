@@ -20,4 +20,4 @@ after_success:
   # - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   # - sh .travis/deploy-dockerhub.sh
   # - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy-heroku.sh
-  - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy-ecs.sh
+  - sh .travis/deploy-ecs.sh
