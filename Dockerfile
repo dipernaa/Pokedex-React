@@ -3,6 +3,7 @@ FROM node:boron
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+RUN mkdir coverage
 
 # Install app dependencies
 COPY package.json yarn.lock /usr/src/app/
