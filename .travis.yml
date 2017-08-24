@@ -11,7 +11,7 @@ node_js:
 install: true
 
 script:
-  - sh .travis/configure-tag.sh
+  - source .travis/configure-tag.sh
   - docker build -t $CONTAINER_NAME:$TAG .
   - docker run $CONTAINER_NAME:$TAG npm test -- -i --no-cache
 
