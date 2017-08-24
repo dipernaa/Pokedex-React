@@ -16,5 +16,5 @@ script:
   - docker run $CONTAINER_NAME:$TAG npm test -- -i --no-cache
 
 after_success:
-  - docker run $CONTAINER_NAME:$TAG cat /usr/src/app/coverage/lcov.info | /usr/src/app/node_modules/coveralls/bin/coveralls.js
+  - docker run $CONTAINER_NAME:$TAG ls && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - sh .travis/deploy.sh
